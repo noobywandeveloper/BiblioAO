@@ -1,0 +1,55 @@
+<svg width="100%" viewBox="0 0 680 320" role="img" xmlns="http://www.w3.org/2000/svg">
+  <title>Ícone Sobre Nós</title>
+  <desc>Estrela formada por pessoas em círculo, representando união e equipa</desc>
+  <defs>
+    <style>
+      .person { fill: #6C63FF; }
+      .person-alt { fill: #A89CFF; }
+      .conn { fill: none; stroke: #6C63FF; stroke-width: 2.5; opacity: 0.35; }
+      .dot { fill: #6C63FF; }
+    </style>
+  </defs>
+
+  <!-- Linhas de conexão entre todos -->
+  <line x1="340" y1="72"  x2="441" y2="133" class="conn"/>
+  <line x1="340" y1="72"  x2="441" y2="247" class="conn"/>
+  <line x1="340" y1="72"  x2="340" y2="268" class="conn"/>
+  <line x1="340" y1="72"  x2="239" y2="247" class="conn"/>
+  <line x1="340" y1="72"  x2="239" y2="133" class="conn"/>
+  <line x1="441" y1="133" x2="441" y2="247" class="conn"/>
+  <line x1="441" y1="133" x2="340" y2="268" class="conn"/>
+  <line x1="441" y1="133" x2="239" y2="247" class="conn"/>
+  <line x1="441" y1="247" x2="340" y2="268" class="conn"/>
+  <line x1="441" y1="247" x2="239" y2="133" class="conn"/>
+  <line x1="340" y1="268" x2="239" y2="247" class="conn"/>
+  <line x1="239" y1="247" x2="239" y2="133" class="conn"/>
+  <line x1="239" y1="133" x2="441" y2="247" class="conn"/>
+
+  <!-- Pessoa topo -->
+  <circle cx="340" cy="55" r="17" class="person"/>
+  <path d="M322 82 Q322 68 340 68 Q358 68 358 82 L358 106 Q358 112 352 112 L328 112 Q322 112 322 106 Z" class="person"/>
+
+  <!-- Pessoa direita cima -->
+  <circle cx="457" cy="126" r="15" class="person-alt"/>
+  <path d="M441 150 Q441 138 457 138 Q473 138 473 150 L473 172 Q473 177 468 177 L446 177 Q441 177 441 172 Z" class="person-alt"/>
+
+  <!-- Pessoa direita baixo -->
+  <circle cx="457" cy="234" r="15" class="person-alt"/>
+  <path d="M441 258 Q441 246 457 246 Q473 246 473 258 L473 280 Q473 285 468 285 L446 285 Q441 285 441 280 Z" class="person-alt"/>
+
+  <!-- Pessoa baixo centro -->
+  <circle cx="340" cy="255" r="17" class="person"/>
+  <path d="M322 282 Q322 268 340 268 Q358 268 358 282 L358 306 Q358 312 352 312 L328 312 Q322 312 322 306 Z" class="person"/>
+
+  <!-- Pessoa esquerda baixo -->
+  <circle cx="223" cy="234" r="15" class="person-alt"/>
+  <path d="M207 258 Q207 246 223 246 Q239 246 239 258 L239 280 Q239 285 234 285 L212 285 Q207 285 207 280 Z" class="person-alt"/>
+
+  <!-- Pessoa esquerda cima -->
+  <circle cx="223" cy="126" r="15" class="person-alt"/>
+  <path d="M207 150 Q207 138 223 138 Q239 138 239 150 L239 172 Q239 177 234 177 L212 177 Q207 177 207 172 Z" class="person-alt"/>
+
+  <!-- Ponto central -->
+  <circle cx="340" cy="183" r="10" class="dot" opacity="0.25"/>
+  <circle cx="340" cy="183" r="5" class="dot" opacity="0.6"/>
+</svg>

@@ -1,0 +1,179 @@
+/* =============================================
+   CATEGORIAS — Página de livros
+   ============================================= */
+
+/* --- Banner --- */
+
+.banner {
+    background: var(--azul);
+    padding: 52px 24px;
+    text-align: center;
+}
+
+.banner-etiqueta {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    color: var(--dourado-claro);
+    margin-bottom: 10px;
+}
+
+.banner h1 {
+    font-family: 'Lora', serif;
+    font-size: clamp(26px, 5vw, 40px);
+    font-weight: 700;
+    color: var(--branco);
+    margin-bottom: 10px;
+}
+
+.banner p {
+    font-size: 15px;
+    color: rgba(255, 255, 255, 0.68);
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+/* --- Barra de Pesquisa --- */
+
+.barra-pesquisa {
+    background: var(--branco);
+    padding: 28px 24px;
+    border-bottom: 1px solid var(--borda);
+}
+
+.pesquisa-form {
+    max-width: 620px;
+    margin: 0 auto;
+    display: flex;
+    border: 2px solid var(--borda);
+    border-radius: 40px;
+    overflow: hidden;
+    transition: border-color 0.2s;
+}
+
+.pesquisa-form:focus-within {
+    border-color: var(--dourado);
+}
+
+.pesquisa-form input {
+    flex: 1;
+    border: none;
+    outline: none;
+    padding: 13px 20px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    color: var(--texto);
+    background: transparent;
+}
+
+.pesquisa-form input::placeholder {
+    color: var(--texto-suave);
+}
+
+.pesquisa-form a {
+    background: var(--azul);
+    color: var(--branco);
+    font-size: 14px;
+    font-weight: 700;
+    padding: 13px 24px;
+    white-space: nowrap;
+    transition: background 0.2s;
+    display: flex;
+    align-items: center;
+}
+
+.pesquisa-form a:hover {
+    background: var(--dourado);
+}
+
+/* --- Filtros --- */
+
+.filtros {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 32px;
+}
+
+.filtros a {
+    font-size: 13px;
+    font-weight: 700;
+    padding: 7px 16px;
+    border-radius: 20px;
+    border: 1.5px solid var(--borda);
+    color: var(--texto-suave);
+    background: var(--branco);
+    transition: all 0.18s;
+}
+
+.filtros a:hover,
+.filtros a.ativo {
+    background: var(--azul);
+    color: var(--branco);
+    border-color: var(--azul);
+}
+
+/* --- Grelha de Livros --- */
+
+
+
+.btn-ler {
+    background: var(--azul);
+    color: var(--branco);
+}
+
+.btn-ler:hover {
+    background: var(--dourado);
+}
+
+.btn-baixar {
+    background: var(--cinza);
+    color: var(--texto-suave);
+    border: 1px solid var(--borda);
+}
+
+.btn-baixar:hover {
+    background: var(--verde);
+    color: var(--branco);
+    border-color: var(--verde);
+}
+
+/* --- Paginação --- */
+
+.paginacao {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 44px;
+}
+
+.paginacao a {
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: var(--raio);
+    font-size: 13px;
+    font-weight: 700;
+    border: 1.5px solid var(--borda);
+    color: var(--texto-suave);
+    transition: all 0.18s;
+}
+
+.paginacao a:hover,
+.paginacao a.ativo {
+    background: var(--azul);
+    color: var(--branco);
+    border-color: var(--azul);
+}
+
+/* --- Responsividade --- */
+
+@media (max-width: 560px) {
+    .grelha-livros {
+        grid-template-columns: 1fr 1fr;
+        gap: 14px;
+    }
+}

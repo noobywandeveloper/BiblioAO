@@ -1,0 +1,79 @@
+<svg width="100%" viewBox="0 0 680 480" role="img" xmlns="http://www.w3.org/2000/svg">
+  <title>Lusofonia — Angola em destaque</title>
+  <desc>Globo estilizado com países lusófonos conectados, Angola em destaque</desc>
+  <defs>
+    <style>
+      .globe-ring { fill: none; stroke: white; stroke-width: 1.5; opacity: 0.15; }
+      .country { fill: #1A6B3C; }
+      .country-pt { fill: #C8102E; }
+      .country-ao { fill: #CC0000; }
+      .conn { fill: none; stroke: white; stroke-width: 1.4; stroke-dasharray: 5 4; opacity: 0.4; }
+      .conn-ao { fill: none; stroke: white; stroke-width: 2.5; stroke-dasharray: 6 3; opacity: 0.85; }
+      .ao-ring { fill: none; stroke: white; stroke-width: 2.5; opacity: 0.3; }
+      .lbl { font-family: sans-serif; font-size: 11px; fill: white; font-weight: 500; }
+      .lbl-ao { font-family: sans-serif; font-size: 13px; fill: white; font-weight: 700; }
+    </style>
+  </defs>
+
+  <!-- Globo de fundo -->
+  <circle cx="340" cy="245" r="195" fill="none" stroke="white" stroke-width="1" opacity="0.07"/>
+  <ellipse cx="340" cy="245" rx="195" ry="55" class="globe-ring"/>
+  <ellipse cx="340" cy="245" rx="140" ry="195" class="globe-ring"/>
+  <ellipse cx="340" cy="245" rx="70" ry="195" class="globe-ring"/>
+  <line x1="145" y1="245" x2="535" y2="245" stroke="white" stroke-width="1" opacity="0.1"/>
+
+  <!-- Halo Angola -->
+  <circle cx="415" cy="315" r="52" class="ao-ring"/>
+  <circle cx="415" cy="315" r="40" class="ao-ring" opacity="0.15"/>
+
+  <!-- Linhas -->
+  <line x1="320" y1="178" x2="415" y2="315" class="conn-ao"/>
+  <line x1="320" y1="178" x2="210" y2="300" class="conn"/>
+  <line x1="320" y1="178" x2="480" y2="285" class="conn"/>
+  <line x1="320" y1="178" x2="248" y2="218" class="conn"/>
+  <line x1="320" y1="178" x2="370" y2="278" class="conn"/>
+  <line x1="320" y1="178" x2="278" y2="242" class="conn"/>
+  <line x1="320" y1="178" x2="446" y2="258" class="conn"/>
+  <line x1="320" y1="178" x2="504" y2="208" class="conn"/>
+  <line x1="320" y1="178" x2="490" y2="178" class="conn"/>
+
+  <!-- Portugal -->
+  <circle cx="320" cy="178" r="20" class="country-pt"/>
+  <text x="320" y="152" text-anchor="middle" class="lbl">Portugal</text>
+
+  <!-- Brasil -->
+  <circle cx="210" cy="300" r="22" class="country"/>
+  <text x="210" y="334" text-anchor="middle" class="lbl">Brasil</text>
+
+  <!-- Angola -->
+  <circle cx="415" cy="315" r="30" class="country-ao"/>
+  <text x="415" y="358" text-anchor="middle" class="lbl-ao">Angola</text>
+
+  <!-- Moçambique -->
+  <circle cx="480" cy="285" r="16" class="country"/>
+  <text x="480" y="314" text-anchor="middle" class="lbl">Moçambique</text>
+
+  <!-- Cabo Verde -->
+  <circle cx="248" cy="218" r="15" class="country"/>
+  <text x="235" y="197" text-anchor="middle" class="lbl">Cabo Verde</text>
+
+  <!-- São Tomé -->
+  <circle cx="370" cy="278" r="13" class="country"/>
+  <text x="370" y="263" text-anchor="middle" class="lbl" font-size="10">S. Tomé e Príncipe</text>
+
+  <!-- Guiné-Bissau -->
+  <circle cx="278" cy="242" r="13" class="country"/>
+  <text x="255" y="268" text-anchor="middle" class="lbl">Guiné-Bissau</text>
+
+  <!-- Guiné Equatorial -->
+  <circle cx="446" cy="258" r="13" class="country"/>
+  <text x="446" y="243" text-anchor="middle" class="lbl" font-size="10">Guiné Equatorial</text>
+
+  <!-- Timor-Leste -->
+  <circle cx="504" cy="208" r="15" class="country"/>
+  <text x="520" y="196" text-anchor="middle" class="lbl">Timor-Leste</text>
+
+  <!-- Macau -->
+  <circle cx="490" cy="178" r="13" class="country"/>
+  <text x="524" y="178" text-anchor="middle" class="lbl">Macau</text>
+</svg>

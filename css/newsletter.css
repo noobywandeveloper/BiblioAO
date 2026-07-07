@@ -1,0 +1,40 @@
+/* =============================================
+   NEWSLETTER (página dedicada)
+   ============================================= */
+
+   .valores-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+    max-width: 800px;
+    margin: 0 auto 48px;
+  }
+  .valor-card {
+    background: var(--branco);
+    border: 1px solid var(--borda);
+    border-top: 3px solid var(--dourado);
+    border-radius: 10px;
+    padding: 22px;
+    transition: box-shadow 0.2s;
+  }
+  .valor-card:hover {
+    box-shadow: var(--sombra);
+  }
+  .valor-titulo {
+    font-family: 'Lora', serif;
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--azul);
+    margin-bottom: 6px;
+  }
+  .valor-texto {
+    font-size: 13px;
+    color: var(--texto-suave);
+    line-height: 1.7;
+  }
+  
+  @media (max-width: 560px) {
+    .valores-grid {
+      grid-template-columns: 1fr;
+    }
+  }

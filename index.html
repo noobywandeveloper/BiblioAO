@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="BiblioAO — A primeira biblioteca digital gratuita dedicada à literatura angolana e da lusofonia. Centenas de livros de Angola, Brasil, Moçambique, Portugal, Cabo Verde, Guiné-Bissau, São Tomé e Príncipe e Timor-Leste.">
+  <title>BiblioAO — Literatura Angolana e Lusofonia</title>
+  <link rel="icon" href="fontes/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/componentes.css">
+  <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+  <input type="checkbox" id="nav-toggle" class="nav-toggle">
+  <header class="nav">
+    <div class="nav-interior">
+      <a href="index.html" class="nav-logo">Biblio<span>AO</span></a>
+      <nav class="nav-links" aria-label="Menu principal">
+        <a href="index.html" class="ativo">Início</a>
+        <a href="html/categorias.html">Livros</a>
+        <a href="html/galeria.html">Galeria</a>
+        <a href="html/blog.html">Blog</a>
+        <a href="html/sobre-nos.html">Sobre</a>
+        <a href="html/contactos.html">Contactos</a>
+        <a href="html/newsletter.html" class="nav-btn">Newsletter</a>
+      </nav>
+
+      <button id="btn-tema" class="btn-tema-alternar" aria-label="Alternar tema">
+        <span class="icone-sol">☀️</span>
+        <span class="icone-lua">🌙</span>
+      </button>
+
+      <label for="nav-toggle" class="nav-toggle-label" aria-label="Menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </label>
+    </div>
+    <nav class="nav-mobile" aria-label="Menu mobile">
+      <a href="index.html">Início</a>
+      <a href="html/categorias.html">Livros</a>
+      <a href="html/galeria.html">Galeria</a>
+      <a href="html/blog.html">Blog</a>
+      <a href="html/sobre-nos.html">Sobre</a>
+      <a href="html/contactos.html">Contactos</a>
+      <a href="html/newsletter.html">Newsletter</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-grid">
+        <div class="hero-texto">
+          <div class="hero-tag">Literatura Angolana e Lusofonia</div>
+          <h1>Descubra as vozes que <em>contam</em> a nossa história</h1>
+          <p class="hero-desc">A primeira biblioteca digital gratuita dedicada aos autores de Angola, Brasil, Moçambique, Portugal, Cabo Verde, Guiné-Bissau, São Tomé e Príncipe e Timor-Leste. Leia online ou descarregue obras completas.</p>
+          <div class="hero-botoes">
+            <a href="html/categorias.html" class="btn btn-principal">Explorar Livros</a>
+            <a href="html/sobre-nos.html" class="btn btn-contorno">Saber Mais</a>
+          </div>
+        </div>
+        <div class="hero-img">
+          <img src="imagens/hero.svg" alt="Prateleira com livros de autores lusófonos" width="600" height="400">
+        </div>
+      </div>
+    </section>
+
+    <section class="secao">
+      <div class="container">
+        <div class="etiqueta">Destaques da Lusofonia</div>
+        <h2 class="titulo-secao">Obras Fundamentais</h2>
+        <div class="linha-dourada"></div>
+        <div class="grelha-livros">
+          <div class="livro-card">
+            <img src="imagens/mayombe.jpg" alt="Mayombe - Pepetela" width="120" height="180">
+            <div class="livro-info">
+              <div class="livro-cat">Angola · Romance</div>
+              <div class="livro-titulo">Mayombe</div>
+              <div class="livro-autor">Pepetela</div>
+              <div class="livro-meta">1980 · 312 pág.</div>
+              <div class="livro-stars">★★★★★ <span>(1240)</span></div>
+              <div class="livro-acoes">
+                <button class="btn-ler">Ler</button>
+                <button class="btn-baixar">PDF</button>
+              </div>
+            </div>
+          </div>
+          <div class="livro-card">
+            <img src="imagens/terra-sonambula.jpg" alt="Terra Sonâmbula - Mia Couto" width="120" height="180">
+            <div class="livro-info">
+              <div class="livro-cat">Moçambique · Romance</div>
+              <div class="livro-titulo">Terra Sonâmbula</div>
+              <div class="livro-autor">Mia Couto</div>
+              <div class="livro-meta">1992 · 240 pág.</div>
+              <div class="livro-stars">★★★★★ <span>(2310)</span></div>
+              <div class="livro-acoes">
+                <button class="btn-ler">Ler</button>
+                <button class="btn-baixar">PDF</button>
+              </div>
+            </div>
+          </div>
+          <div class="livro-card">
+            <img src="imagens/niketche.jpg" alt="Niketche - Paulina Chiziane" width="120" height="180">
+            <div class="livro-info">
+              <div class="livro-cat">Moçambique · Romance</div>
+              <div class="livro-titulo">Niketche</div>
+              <div class="livro-autor">Paulina Chiziane</div>
+              <div class="livro-meta">2002 · 304 pág.</div>
+              <div class="livro-stars">★★★★½ <span>(980)</span></div>
+              <div class="livro-acoes">
+                <button class="btn-ler">Ler</button>
+                <button class="btn-baixar">PDF</button>
+              </div>
+            </div>
+          </div>
+          <div class="livro-card">
+            <img src="imagens/bom-dia-camaradas.jpg" alt="Bom Dia Camaradas - Ondjaki" width="120" height="180">
+            <div class="livro-info">
+              <div class="livro-cat">Angola · Romance</div>
+              <div class="livro-titulo">Bom Dia Camaradas</div>
+              <div class="livro-autor">Ondjaki</div>
+              <div class="livro-meta">2001 · 180 pág.</div>
+              <div class="livro-stars">★★★★½ <span>(3100)</span></div>
+              <div class="livro-acoes">
+                <button class="btn-ler">Ler</button>
+                <button class="btn-baixar">PDF</button>
+              </div>
+            </div>
+          </div>
+          <div class="livro-card">
+            <img src="imagens/geracao-da-utopia.jpg" alt="Geração da Utopia - Pepetela" width="120" height="180">
+            <div class="livro-info">
+              <div class="livro-cat">Angola · Romance</div>
+              <div class="livro-titulo">Geração da Utopia</div>
+              <div class="livro-autor">Pepetela</div>
+              <div class="livro-meta">1992 · 352 pág.</div>
+              <div class="livro-stars">★★★★½ <span>(670)</span></div>
+              <div class="livro-acoes">
+                <button class="btn-ler">Ler</button>
+                <button class="btn-baixar">PDF</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="secao secao-cinza">
+      <div class="container">
+        <div class="etiqueta">Novos Títulos</div>
+        <h2 class="titulo-secao">Adicionados Recentemente</h2>
+        <div class="linha-dourada"></div>
+        <div class="grelha-livros">
+          <div class="livro-card">
+            <img src="imagens/rainha-ginga.jpg" alt="A Rainha Ginga - Agualusa" width="120" height="180">
+            <div class="livro-info">
+              <div class="livro-cat">Angola · Romance Histórico</div>
+              <div class="livro-titulo">A Rainha Ginga</div>
+              <div class="livro-autor">José Eduardo Agualusa</div>
+              <div class="livro-meta">2014 · 260 pág.</div>
+              <div class="livro-stars">★★★★½ <span>(2100)</span></div>
+              <div class="livro-acoes">
+                <button class="btn-ler">Ler</button>
+                <button class="btn-baixar">PDF</button>
+              </div>
+            </div>
+          </div>
+          <div class="livro-card">
+            <img src="imagens/o-vendedor-de-passados.jpg" alt="O Vendedor de Passados - Agualusa" width="120" height="180">
+            <div class="livro-info">
+              <div class="livro-cat">Angola · Romance</div>
+              <div class="livro-titulo">O Vendedor de Passados</div>
+              <div class="livro-autor">José Eduardo Agualusa</div>
+              <div class="livro-meta">2004 · 248 pág.</div>
+              <div class="livro-stars">★★★★½ <span>(730)</span></div>
+              <div class="livro-acoes">
+                <button class="btn-ler">Ler</button>
+                <button class="btn-baixar">PDF</button>
+              </div>
+            </div>
+          </div>
+          <div class="livro-card">
+            <img src="imagens/minha-rua.jpg" alt="Os da minha rua" width="120" height="180">
+            <div class="livro-info">
+              <div class="livro-cat">Angola · Contos</div>
+              <div class="livro-titulo">Os da minha rua</div>
+              <div class="livro-autor">Ondjaki</div>
+              <div class="livro-meta">2007 · 112 pág.</div>
+              <div class="livro-stars">★★★★½ <span>(520)</span></div>
+              <div class="livro-acoes">
+                <button class="btn-ler">Ler</button>
+                <button class="btn-baixar">PDF</button>
+              </div>
+            </div>
+          </div>
+          <div class="livro-card">
+            <img src="imagens/os-transparentes.jpg" alt="Os Transparentes - Ondjaki" width="120" height="180">
+            <div class="livro-info">
+              <div class="livro-cat">Angola · Romance</div>
+              <div class="livro-titulo">Os Transparentes</div>
+              <div class="livro-autor">Ondjaki</div>
+              <div class="livro-meta">2012 · 296 pág.</div>
+              <div class="livro-stars">★★★★☆ <span>(420)</span></div>
+              <div class="livro-acoes">
+                <button class="btn-ler">Ler</button>
+                <button class="btn-baixar">PDF</button>
+              </div>
+            </div>
+          </div>
+          <div class="livro-card">
+            <img src="imagens/paraiso.jpg" alt="Luanda,Lisboa,Paraiso" width="120" height="180">
+            <div class="livro-info">
+              <div class="livro-cat">Portugal · Romance</div>
+              <div class="livro-titulo">Luanda, Lisboa, Paraiso</div>
+              <div class="livro-autor">Djamila Pereira de Almeida</div>
+              <div class="livro-meta">2018 · 240 pág.</div>
+              <div class="livro-stars">★★★★½ <span>(1670)</span></div>
+              <div class="livro-acoes">
+                <button class="btn-ler">Ler</button>
+                <button class="btn-baixar">PDF</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="centro">
+          <a href="html/categorias.html" class="btn btn-principal">Ver Todos os Livros</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="secao secao-azul">
+      <div class="container">
+        <div class="stats-grid">
+          <div class="stat">
+            <div class="stat-num">500+</div>
+            <div class="stat-label">Obras de Autores Lusófonos</div>
+          </div>
+          <div class="stat">
+            <div class="stat-num">40+</div>
+            <div class="stat-label">Escritores Angolanos</div>
+          </div>
+          <div class="stat">
+            <div class="stat-num">9</div>
+            <div class="stat-label">Países Representados</div>
+          </div>
+          <div class="stat">
+            <div class="stat-num">100%</div>
+            <div class="stat-label">Gratuito</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="secao">
+      <div class="container">
+        <div class="centro">
+          <div class="etiqueta">Comunidade de Leitores</div>
+          <h2 class="titulo-secao">O que dizem os leitores</h2>
+          <div class="linha-dourada centro"></div>
+        </div>
+        <div class="testemunhos-grid">
+          <div class="testemunho">
+            <div class="testemunho-stars">★★★★★</div>
+            <p class="testemunho-texto">Finalmente uma plataforma que valoriza os nossos escritores. Encontrei obras do Pepetela que nunca tinha lido.</p>
+            <div class="testemunho-nome">Albertina Francisco</div>
+            <div class="testemunho-cargo">Leitora, Luanda</div>
+          </div>
+          <div class="testemunho">
+            <div class="testemunho-stars">★★★★★</div>
+            <p class="testemunho-texto">Mia Couto, Agualusa, Ondjaki... todos num só lugar. A minha sala de aula adora.</p>
+            <div class="testemunho-nome">Manuel Cambinda</div>
+            <div class="testemunho-cargo">Professor, Benguela</div>
+          </div>
+          <div class="testemunho">
+            <div class="testemunho-stars">★★★★☆</div>
+            <p class="testemunho-texto">Descobri a poesia de Aldair Rodrigues e a força das autoras moçambicanas. Imperdível.</p>
+            <div class="testemunho-nome">Helena dos Santos</div>
+            <div class="testemunho-cargo">Jornalista, Huambo</div>
+          </div>
+        </div>
+        <div class="centro">
+          <a href="html/testemunhos.html" class="btn btn-principal">Ver Mais Testemunhos</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="nl-inline">
+      <h2>Receba novidades sobre literatura lusófona</h2>
+      <p>Subscreva a nossa newsletter e fique a par de novos lançamentos, artigos e entrevistas com autores.</p>
+      <form class="nl-form-inline" action="html/newsletter.html" method="post">
+        <input type="email" name="email" placeholder="O seu endereço de email...">
+        <button type="submit">Subscrever</button>
+      </form>
+    </section>
+  </main>
+
+  <footer class="rodape">
+    <div class="rodape-grid">
+      <div>
+        <div class="rodape-logo">Biblio<span>AO</span></div>
+        <p class="rodape-desc">A primeira biblioteca digital gratuita dedicada à literatura angolana e da lusofonia. Promovemos a leitura e a diversidade cultural.</p>
+        <div class="rodape-redes">
+          <a href="https://www.facebook.com/juliomalanda.junior" aria-label="Facebook">Fb</a>
+          <a href="https://www.instagram.com/juliomalanda/" aria-label="Instagram">Ig</a>
+          <a href="#" aria-label="Twitter">Tw</a>
+          <a href="#" aria-label="YouTube">Yt</a>
+        </div>
+      </div>
+      <div class="rodape-col">
+        <div class="rodape-col-titulo">Biblioteca</div>
+        <a href="html/categorias.html">Todos os Livros</a>
+        <a href="html/galeria.html">Galeria</a>
+        <a href="html/blog.html">Blog</a>
+      </div>
+      <div class="rodape-col">
+        <div class="rodape-col-titulo">Informação</div>
+        <a href="html/sobre-nos.html">Sobre Nós</a>
+        <a href="html/testemunhos.html">Testemunhos</a>
+        <a href="html/faq.html">FAQ</a>
+        <a href="html/contactos.html">Contactos</a>
+      </div>
+      <div class="rodape-col">
+        <div class="rodape-col-titulo">Legal</div>
+        <a href="html/privacidade.html">Privacidade</a>
+        <a href="html/termos.html">Termos</a>
+        <a href="html/mapa-do-site.html">Mapa do Site</a>
+      </div>
+    </div>
+    <div class="rodape-base">
+      <span>&copy; 2025 BiblioAO · Literatura Angolana e Lusofonia</span>
+      <span>
+        <a href="html/privacidade.html">Privacidade</a> &middot;
+        <a href="html/termos.html">Termos</a> &middot;
+        <a href="html/mapa-do-site.html">Mapa do Site</a>
+      </span>
+    </div>
+  </footer>
+
+  <button id="btn-topo" title="Voltar ao topo">↑</button>
+  <script src="javaScript/app.js"></script>
+</body>
+</html>

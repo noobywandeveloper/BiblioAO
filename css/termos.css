@@ -1,0 +1,81 @@
+/* =============================================
+   TERMOS — Página de termos e condições
+   ============================================= */
+
+   .banner {
+    background: var(--azul);
+    padding: 52px 24px;
+    text-align: center;
+}
+
+.banner-etiqueta {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    color: var(--dourado-claro);
+    margin-bottom: 10px;
+}
+
+.banner h1 {
+    font-family: 'Lora', serif;
+    font-size: clamp(26px, 5vw, 40px);
+    font-weight: 700;
+    color: var(--branco);
+    margin-bottom: 10px;
+}
+
+.banner p {
+    font-size: 15px;
+    color: rgba(255, 255, 255, 0.68);
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.texto-pagina {
+    max-width: 760px;
+    margin: 0 auto;
+}
+
+.data-doc {
+    font-size: 12px;
+    color: var(--texto-suave);
+    margin-bottom: 28px;
+}
+
+.aviso-caixa {
+    background: rgba(196, 124, 10, 0.08);
+    border-left: 4px solid var(--dourado);
+    border-radius: 0 var(--raio) var(--raio) 0;
+    padding: 14px 18px;
+    margin: 20px 0;
+    font-size: 13px;
+    color: var(--texto-suave);
+}
+
+.texto-pagina h2 {
+    font-family: 'Lora', serif;
+    font-size: 19px;
+    color: var(--azul);
+    margin: 32px 0 10px;
+}
+
+.texto-pagina p {
+    font-size: 14px;
+    color: var(--texto-suave);
+    line-height: 1.9;
+    margin-bottom: 12px;
+}
+
+.texto-pagina ul {
+    padding-left: 20px;
+    list-style: disc;
+    margin-bottom: 14px;
+}
+
+.texto-pagina ul li {
+    font-size: 14px;
+    color: var(--texto-suave);
+    line-height: 1.9;
+    margin-bottom: 6px;
+}

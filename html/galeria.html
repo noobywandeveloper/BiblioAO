@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="BiblioAO — Galeria de capas e coleções temáticas da literatura angolana e da lusofonia.">
+  <title>Galeria — Literatura Angolana e Lusofonia | BiblioAO</title>
+  <link rel="icon" href="../fontes/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../css/global.css">
+  <link rel="stylesheet" href="../css/componentes.css">
+  <link rel="stylesheet" href="../css/galeria.css">
+</head>
+<body>
+  <input type="checkbox" id="nav-toggle" class="nav-toggle">
+  <header class="nav">
+    <div class="nav-interior">
+      <a href="../index.html" class="nav-logo">Biblio<span>AO</span></a>
+      <nav class="nav-links" aria-label="Menu principal">
+        <a href="../index.html">Início</a>
+        <a href="categorias.html">Livros</a>
+        <a href="galeria.html" class="ativo">Galeria</a>
+        <a href="blog.html">Blog</a>
+        <a href="sobre-nos.html">Sobre</a>
+        <a href="contactos.html">Contactos</a>
+        <a href="newsletter.html" class="nav-btn">Newsletter</a>
+      </nav>
+
+      <button id="btn-tema" class="btn-tema-alternar" aria-label="Alternar tema">
+        <span class="icone-sol">☀️</span>
+        <span class="icone-lua">🌙</span>
+      </button>
+
+      <label for="nav-toggle" class="nav-toggle-label" aria-label="Menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </label>
+    </div>
+    <nav class="nav-mobile" aria-label="Menu mobile">
+      <a href="../index.html">Início</a>
+      <a href="categorias.html">Livros</a>
+      <a href="galeria.html">Galeria</a>
+      <a href="blog.html">Blog</a>
+      <a href="sobre-nos.html">Sobre</a>
+      <a href="contactos.html">Contactos</a>
+      <a href="newsletter.html">Newsletter</a>
+    </nav>
+  </header>
+
+  <div class="banner">
+    <div class="banner-etiqueta">Portfólio Visual</div>
+    <h1>Galeria</h1>
+    <p>Colecções em destaque e selecções temáticas da literatura lusófona.</p>
+  </div>
+
+  <section class="secao">
+    <div class="container">
+      <div class="filtros">
+        <a href="#" class="filtro-galeria-btn ativo" data-filtro="todas">Todas</a>
+        <a href="#" class="filtro-galeria-btn" data-filtro="Angola">Angola</a>
+        <a href="#" class="filtro-galeria-btn" data-filtro="Moçambique">Moçambique</a>
+        <a href="#" class="filtro-galeria-btn" data-filtro="Brasil">Brasil</a>
+        <a href="#" class="filtro-galeria-btn" data-filtro="Poesia">Poesia</a>
+      </div>
+
+      <div class="galeria-grid">
+        <a href="categorias.html" class="galeria-item" data-categoria="Angola">
+          <img src="../imagens/romance.jpg" alt="Romance Angolano">
+          <div class="galeria-legenda"><span>Romance Angolano</span></div>
+        </a>
+        <a href="categorias.html" class="galeria-item" data-categoria="Moçambique">
+          <img src="../imagens/Mocambique.png" alt="Literatura Moçambicana">
+          <div class="galeria-legenda"><span>Literatura Moçambicana</span></div>
+        </a>
+        <a href="categorias.html" class="galeria-item" data-categoria="Brasil">
+          <img src="../imagens/brasil.webp" alt="Clássicos Brasileiros">
+          <div class="galeria-legenda"><span>Clássicos Brasileiros</span></div>
+        </a>
+        <a href="categorias.html" class="galeria-item" data-categoria="Angola Poesia"> <img src="../imagens/agostinho.jpg" alt="Poesia Angolana">
+          <div class="galeria-legenda"><span>Poesia Angolana</span></div>
+        </a>
+        <a href="categorias.html" class="galeria-item" data-categoria="Cabo Verde">
+          <img src="../imagens/Autores.jpg" alt="Autores Cabo-verdianos">
+          <div class="galeria-legenda"><span>Autores Cabo-verdianos</span></div>
+        </a>
+        <a href="categorias.html" class="galeria-item" data-categoria="Lusofonia">
+          <img src="../imagens/lusofonia.jpg" alt="Contos da Lusofonia">
+          <div class="galeria-legenda"><span>Contos da Lusofonia</span></div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="nl-inline">
+    <h2>Receba novidades em primeira mão</h2>
+    <p>Subscreva e fique a par das novas coleções.</p>
+    <form class="nl-form-inline" action="newsletter.html" method="post">
+      <input type="email" name="email" placeholder="O seu email...">
+      <button type="submit">Subscrever</button>
+    </form>
+  </section>
+
+  <footer class="rodape">
+    <div class="rodape-grid">
+      <div>
+        <div class="rodape-logo">Biblio<span>AO</span></div>
+        <p class="rodape-desc">A primeira biblioteca digital gratuita dedicada à literatura angolana e da lusofonia. Promovemos a leitura e a diversidade cultural.</p>
+        <div class="rodape-redes">
+          <a href="https://www.facebook.com/juliomalanda.junior" aria-label="Facebook">Fb</a>
+          <a href="https://www.instagram.com/juliomalanda/" aria-label="Instagram">Ig</a>
+          <a href="#" aria-label="Twitter">Tw</a>
+          <a href="#" aria-label="YouTube">Yt</a>
+        </div>
+      </div>
+      <div class="rodape-col">
+        <div class="rodape-col-titulo">Biblioteca</div>
+        <a href="categorias.html">Todos os Livros</a>
+        <a href="galeria.html">Galeria</a>
+        <a href="blog.html">Blog</a>
+      </div>
+      <div class="rodape-col">
+        <div class="rodape-col-titulo">Informação</div>
+        <a href="sobre-nos.html">Sobre Nós</a>
+        <a href="testemunhos.html">Testemunhos</a>
+        <a href="faq.html">FAQ</a>
+        <a href="contactos.html">Contactos</a>
+      </div>
+      <div class="rodape-col">
+        <div class="rodape-col-titulo">Legal</div>
+        <a href="privacidade.html">Privacidade</a>
+        <a href="termos.html">Termos</a>
+        <a href="mapa-do-site.html">Mapa do Site</a>
+      </div>
+    </div>
+    <div class="rodape-base">
+      <span>&copy; 2025 BiblioAO · Literatura Angolana e Lusofonia</span>
+      <span>
+        <a href="privacidade.html">Privacidade</a> &middot;
+        <a href="termos.html">Termos</a> &middot;
+        <a href="mapa-do-site.html">Mapa do Site</a>
+      </span>
+    </div>
+  </footer>
+
+  <button id="btn-topo" title="Voltar ao topo">↑</button>
+  <script src="../javaScript/app.js"></script>
+</body>
+</html>

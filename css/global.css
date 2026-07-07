@@ -1,0 +1,799 @@
+/* =============================================
+   GLOBAL — Reset, variáveis, tipografia, header, footer, utilitários
+   ============================================= */
+
+   @font-face {
+    font-family: 'Lora';
+    src: url('../fontes/Lora.ttf') format('truetype');
+    font-weight: 400 700;
+  }
+  @font-face {
+    font-family: 'Poppins';
+    src: url('../fontes/Poppins-Regular.ttf') format('truetype');
+    font-weight: 400;
+  }
+  @font-face {
+    font-family: 'Poppins';
+    src: url('../fontes/Poppins-Bold.ttf') format('truetype');
+    font-weight: 700;
+  }
+  
+  /* =============================================
+     VARIÁVEIS — Modo claro (padrão)
+     ============================================= */
+  :root {
+    --azul         : #1b3358;
+    --azul-escuro  : #111f36;
+    --dourado      : #c47c0a;
+    --dourado-claro: #e8a820;
+    --verde        : #2d6b52;
+    --cinza        : #f4f0ea;
+    --branco       : #ffffff;
+    --texto        : #1a1208;
+    --texto-suave  : #6a6050;
+    --borda        : #ddd5c0;
+    --raio         : 8px;
+    --sombra       : 0 4px 20px rgba(0, 0, 0, 0.10);
+  
+    /* Superfícies de inputs/cards (modo claro) */
+    --superficie   : #ffffff;
+    --superficie-alt: #f4f0ea;
+  }
+  
+  /* =============================================
+     VARIÁVEIS — Modo escuro
+     ============================================= */
+  .dark-mode {
+    /* Fundos em camadas */
+    --branco       : #0b1120;   /* fundo principal da página */
+    --cinza        : #111827;   /* seções alternadas / cards */
+    --superficie   : #162035;   /* inputs, cards elevados */
+    --superficie-alt: #1c2a42;  /* hover states de inputs */
+  
+    /* Bordas e sombras */
+    --borda        : #2a3f5f;
+    --sombra       : 0 4px 24px rgba(0, 0, 0, 0.55);
+  
+    /* Textos com contraste WCAG AA */
+    --texto        : #e8edf5;   /* texto principal */
+    --texto-suave  : #9ab0cc;   /* texto secundário */
+  
+    /* Cores de destaque — ligeiramente mais vivas no escuro */
+    --dourado      : #d4a020;
+    --dourado-claro: #f0c040;
+    --verde        : #3a8a6a;
+  
+    /* Azul institucional mantido para nav/rodapé */
+    --azul         : #1b3358;
+    --azul-escuro  : #111f36;
+  }
+  
+  /* =============================================
+     RESET
+     ============================================= */
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+    color: var(--texto);
+    background: var(--branco);
+    line-height: 1.7;
+    overflow-x: hidden;
+    transition: background 0.3s, color 0.3s;
+  }
+  img {
+    display: block;
+    max-width: 100%;
+    border-radius: 6px;
+  }
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+  ul {
+    list-style: none;
+  }
+  
+  /* =============================================
+     UTILITÁRIOS
+     ============================================= */
+  .container {
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+  .secao {
+    padding: 64px 24px;
+    transition: background 0.3s;
+  }
+  .secao-cinza {
+    background: var(--cinza);
+  }
+  .secao-azul {
+    background: var(--azul);
+  }
+  .etiqueta {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--dourado);
+    margin-bottom: 8px;
+  }
+  .titulo-secao {
+    font-family: 'Lora', serif;
+    font-size: clamp(22px, 4vw, 34px);
+    font-weight: 700;
+    color: var(--azul);
+    margin-bottom: 10px;
+    line-height: 1.2;
+    transition: color 0.3s;
+  }
+  .titulo-secao.branco {
+    color: var(--branco);
+  }
+  .linha-dourada {
+    width: 44px;
+    height: 3px;
+    background: var(--dourado);
+    border-radius: 2px;
+    margin-bottom: 36px;
+  }
+  .linha-dourada.centro {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .centro {
+    text-align: center;
+  }
+  
+  /* =============================================
+     NAVEGAÇÃO
+     ============================================= */
+  .nav {
+    background: var(--azul);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.20);
+  }
+  .nav-interior {
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 0 24px;
+    height: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+  }
+  .nav-logo {
+    font-family: 'Lora', serif;
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--branco);
+    flex-shrink: 0;
+  }
+  .nav-logo span {
+    color: var(--dourado-claro);
+  }
+  .nav-links {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+  }
+  .nav-links a {
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.80);
+    padding: 8px 13px;
+    border-radius: var(--raio);
+    transition: background 0.2s, color 0.2s;
+  }
+  .nav-links a:hover,
+  .nav-links a.ativo {
+    background: rgba(255, 255, 255, 0.12);
+    color: #ffffff;
+  }
+  .nav-btn {
+    background: var(--dourado) !important;
+    color: #ffffff !important;
+    border-radius: 20px !important;
+    font-weight: 700 !important;
+    padding: 8px 18px !important;
+  }
+  .nav-btn:hover {
+    background: var(--dourado-claro) !important;
+  }
+  .nav-toggle {
+    display: none;
+  }
+  .nav-toggle-label {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    padding: 6px;
+  }
+  .nav-toggle-label span {
+    display: block;
+    width: 24px;
+    height: 2px;
+    background: #ffffff;
+    border-radius: 2px;
+    transition: transform 0.25s, opacity 0.25s;
+  }
+  .nav-mobile {
+    display: none;
+    flex-direction: column;
+    background: var(--azul-escuro);
+    padding: 12px 24px 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+  }
+  .nav-mobile a {
+    font-size: 15px;
+    color: rgba(255, 255, 255, 0.82);
+    padding: 13px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+    transition: color 0.2s;
+  }
+  .nav-mobile a:hover {
+    color: #ffffff;
+  }
+  .nav-toggle:checked ~ .nav .nav-mobile {
+    display: flex;
+  }
+  .nav-toggle:checked ~ .nav .nav-toggle-label span:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+  }
+  .nav-toggle:checked ~ .nav .nav-toggle-label span:nth-child(2) {
+    opacity: 0;
+  }
+  .nav-toggle:checked ~ .nav .nav-toggle-label span:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+  }
+  
+  /* =============================================
+     RODAPÉ
+     ============================================= */
+  .rodape {
+    background: var(--azul);
+    padding: 48px 24px 0;
+  }
+  .rodape-grid {
+    max-width: 1140px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    gap: 36px;
+    padding-bottom: 40px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.10);
+  }
+  .rodape-logo {
+    font-family: 'Lora', serif;
+    font-size: 20px;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 12px;
+  }
+  .rodape-logo span {
+    color: var(--dourado-claro);
+  }
+  .rodape-desc {
+    font-size: 13px;
+    color: rgba(255, 255, 255, 0.55);
+    line-height: 1.8;
+    max-width: 260px;
+    margin-bottom: 20px;
+    transition: color 0.3s;
+  }
+  .rodape-redes {
+    display: flex;
+    gap: 10px;
+  }
+  .rodape-redes a {
+    width: 34px;
+    height: 34px;
+    border-radius: var(--raio);
+    background: rgba(255, 255, 255, 0.08);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 13px;
+    font-weight: 700;
+    color: rgba(255, 255, 255, 0.60);
+    transition: background 0.2s, color 0.2s;
+  }
+  .rodape-redes a:hover {
+    background: var(--dourado);
+    color: #ffffff;
+  }
+  .rodape-col-titulo {
+    font-family: 'Lora', serif;
+    font-size: 14px;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 14px;
+  }
+  .rodape-col a {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 13px;
+    color: rgba(255, 255, 255, 0.55);
+    padding: 4px 0;
+    transition: color 0.15s, padding-left 0.15s;
+  }
+  .rodape-col a::before {
+    content: '›';
+    color: var(--dourado);
+    font-size: 14px;
+  }
+  .rodape-col a:hover {
+    color: #ffffff;
+    padding-left: 4px;
+  }
+  .rodape-base {
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 18px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.38);
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  .rodape-base a {
+    color: rgba(255, 255, 255, 0.50);
+    transition: color 0.15s;
+  }
+  .rodape-base a:hover {
+    color: var(--dourado-claro);
+  }
+  
+  /* =============================================
+     MODO ESCURO — Ajustes globais
+     ============================================= */
+  
+  /* Fundo e texto do body já são cobertos pelas variáveis */
+  .dark-mode .secao-cinza {
+    background: var(--cinza);
+  }
+  
+  /* Títulos de seção no escuro */
+  .dark-mode .titulo-secao {
+    color: var(--dourado-claro);
+  }
+  .dark-mode .titulo-secao.branco {
+    color: #ffffff;
+  }
+  
+  /* Seção azul mantém fundo mas clareia levemente o texto */
+  .dark-mode .secao-azul {
+    background: var(--azul-escuro);
+  }
+  .dark-mode .secao-azul .titulo-secao {
+    color: #ffffff;
+  }
+  
+  /* =============================================
+     MODO ESCURO — Cards de livros
+     ============================================= */
+  .dark-mode .livro-card {
+    background: var(--superficie);
+    border-color: var(--borda);
+    box-shadow: var(--sombra);
+  }
+  .dark-mode .livro-titulo {
+    color: var(--texto);
+  }
+  .dark-mode .livro-autor,
+  .dark-mode .livro-meta,
+  .dark-mode .livro-stars span {
+    color: var(--texto-suave);
+  }
+  
+  /* =============================================
+     MODO ESCURO — Botões de livros
+     ============================================= */
+  .dark-mode .btn-ler {
+    background: var(--azul);
+    color: #ffffff;
+  }
+  .dark-mode .btn-ler:hover {
+    background: var(--dourado);
+    color: #ffffff;
+  }
+  .dark-mode .btn-baixar {
+    background: var(--superficie-alt);
+    color: var(--texto-suave);
+    border-color: var(--borda);
+  }
+  .dark-mode .btn-baixar:hover {
+    background: var(--verde);
+    color: #ffffff;
+    border-color: var(--verde);
+  }
+  
+  /* =============================================
+     MODO ESCURO — Testemunhos
+     ============================================= */
+  .dark-mode .testemunho {
+    background: var(--superficie);
+    border-color: var(--borda);
+  }
+  .dark-mode .testemunho-texto {
+    color: var(--texto-suave);
+  }
+  .dark-mode .testemunho-nome {
+    color: var(--texto);
+  }
+  .dark-mode .testemunho-cargo {
+    color: var(--texto-suave);
+  }
+  
+  /* =============================================
+     MODO ESCURO — FAQ
+     ============================================= */
+  .dark-mode .faq-lista details {
+    background: var(--superficie);
+    border-color: var(--borda);
+  }
+  .dark-mode .faq-lista summary {
+    color: var(--texto);
+  }
+  .dark-mode .faq-resposta {
+    color: var(--texto-suave);
+    border-top-color: var(--borda);
+  }
+  
+  /* =============================================
+     MODO ESCURO — Formulários
+     ============================================= */
+  .dark-mode .form-label {
+    color: var(--texto);
+  }
+  .dark-mode .form-input,
+  .dark-mode .form-textarea,
+  .dark-mode .form-select {
+    background: var(--superficie);
+    color: var(--texto);
+    border-color: var(--borda);
+  }
+  .dark-mode .form-input::placeholder,
+  .dark-mode .form-textarea::placeholder {
+    color: var(--texto-suave);
+  }
+  .dark-mode .form-input:focus,
+  .dark-mode .form-textarea:focus,
+  .dark-mode .form-select:focus {
+    border-color: var(--dourado);
+    box-shadow: 0 0 0 3px rgba(212, 160, 32, 0.22);
+  }
+  
+  /* =============================================
+     MODO ESCURO — Barra de pesquisa
+     ============================================= */
+  .dark-mode .barra-pesquisa {
+    background: var(--cinza);
+    border-bottom-color: var(--borda);
+  }
+  .dark-mode .pesquisa-form {
+    border-color: var(--borda);
+    background: var(--superficie);
+  }
+  .dark-mode .pesquisa-form input {
+    color: var(--texto);
+    background: transparent;
+  }
+  .dark-mode .pesquisa-form input::placeholder {
+    color: var(--texto-suave);
+  }
+  .dark-mode .pesquisa-form button {
+    background: var(--azul);
+    color: #ffffff;
+  }
+  .dark-mode .pesquisa-form button:hover {
+    background: var(--dourado);
+  }
+  
+  /* =============================================
+     MODO ESCURO — Filtros
+     ============================================= */
+  .dark-mode .filtros a {
+    background: var(--superficie);
+    border-color: var(--borda);
+    color: var(--texto-suave);
+  }
+  .dark-mode .filtros a:hover,
+  .dark-mode .filtros a.ativo {
+    background: var(--azul);
+    color: #ffffff;
+    border-color: var(--azul);
+  }
+  
+  /* =============================================
+     MODO ESCURO — Paginação
+     ============================================= */
+  .dark-mode .paginacao a {
+    border-color: var(--borda);
+    color: var(--texto-suave);
+  }
+  .dark-mode .paginacao a:hover,
+  .dark-mode .paginacao a.ativo {
+    background: var(--azul);
+    color: #ffffff;
+    border-color: var(--azul);
+  }
+  
+  /* =============================================
+     MODO ESCURO — Mapa do site
+     ============================================= */
+  .dark-mode .mapa-bloco {
+    background: var(--superficie);
+    border-color: var(--borda);
+  }
+  .dark-mode .mapa-bloco-titulo {
+    color: var(--texto);
+  }
+  .dark-mode .mapa-bloco a {
+    color: var(--texto-suave);
+  }
+  .dark-mode .mapa-bloco a:hover {
+    color: var(--dourado-claro);
+  }
+  
+  /* =============================================
+     MODO ESCURO — Estatísticas
+     ============================================= */
+  .dark-mode .stats-grid .stat {
+    background: rgba(255, 255, 255, 0.04);
+    border-color: rgba(255, 255, 255, 0.08);
+  }
+  .dark-mode .stat-num {
+    color: var(--dourado-claro);
+  }
+  .dark-mode .stat-label {
+    color: var(--texto-suave);
+  }
+  
+  /* =============================================
+     MODO ESCURO — Galeria
+     ============================================= */
+  .dark-mode .galeria-item {
+    border: 1px solid var(--borda);
+    box-shadow: var(--sombra);
+  }
+  .dark-mode .galeria-item:hover {
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.65);
+  }
+  .dark-mode .galeria-legenda {
+    background: rgba(0, 0, 0, 0.78);
+  }
+  .dark-mode .galeria-legenda span {
+    color: #ffffff;
+    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.6);
+  }
+  
+  /* =============================================
+     MODO ESCURO — Newsletter
+     ============================================= */
+  .dark-mode .nl-inline {
+    background: linear-gradient(135deg, #060c18, #0c1325);
+  }
+  .dark-mode .nl-caixa {
+    background: var(--superficie);
+  }
+  .dark-mode .nl-form-inline {
+    border-color: rgba(255, 255, 255, 0.15);
+  }
+  .dark-mode .nl-form-inline input {
+    color: var(--texto);
+    background: transparent;
+  }
+  .dark-mode .nl-form-inline input::placeholder {
+    color: var(--texto-suave);
+  }
+  
+  /* =============================================
+     MODO ESCURO — Páginas de texto
+     ============================================= */
+  .dark-mode .texto-pagina h2 {
+    color: var(--texto);
+  }
+  .dark-mode .texto-pagina p,
+  .dark-mode .texto-pagina ul li {
+    color: var(--texto-suave);
+  }
+  .dark-mode .aviso-caixa {
+    background: rgba(212, 160, 32, 0.10);
+    border-left-color: var(--dourado);
+  }
+  
+  /* =============================================
+     MODO ESCURO — Erro 404
+     ============================================= */
+  .dark-mode .erro-num {
+    opacity: 0.18;
+  }
+  .dark-mode .erro-titulo {
+    color: var(--texto);
+  }
+  .dark-mode .erro-desc {
+    color: var(--texto-suave);
+  }
+  
+  /* =============================================
+     MODO ESCURO — Rodapé
+     ============================================= */
+  .dark-mode .rodape {
+    background: #0d1525;
+    border-top: 1px solid var(--borda);
+  }
+  .dark-mode .rodape-desc,
+  .dark-mode .rodape-col a,
+  .dark-mode .rodape-base {
+    color: var(--texto-suave);
+  }
+  .dark-mode .rodape-col a:hover {
+    color: var(--dourado-claro);
+  }
+  .dark-mode .rodape-redes a {
+    background: rgba(255, 255, 255, 0.06);
+    color: var(--texto-suave);
+  }
+  .dark-mode .rodape-redes a:hover {
+    background: var(--dourado);
+    color: #ffffff;
+  }
+  .dark-mode .rodape-base a:hover {
+    color: var(--dourado-claro);
+  }
+  
+  /* =============================================
+     MODO ESCURO — Botão de alternância (#btn-tema)
+     ============================================= */
+  #btn-tema {
+    background: var(--dourado);
+    color: #ffffff;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 30px;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s, box-shadow 0.3s;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+  /* Ícones do botão: mostra lua no modo claro, sol no modo escuro */
+  #btn-tema .icone-sol {
+    display: none;
+  }
+  #btn-tema .icone-lua {
+    display: inline;
+  }
+  .dark-mode #btn-tema .icone-sol {
+    display: inline;
+  }
+  .dark-mode #btn-tema .icone-lua {
+    display: none;
+  }
+  #btn-tema:hover {
+    background: var(--dourado-claro);
+    transform: scale(1.03);
+    box-shadow: 0 4px 12px rgba(196, 124, 10, 0.4);
+  }
+  #btn-tema:active {
+    transform: scale(0.97);
+  }
+  .dark-mode #btn-tema {
+    background: var(--dourado-claro);
+    box-shadow: 0 2px 12px rgba(232, 184, 48, 0.3);
+  }
+  .dark-mode #btn-tema:hover {
+    background: var(--dourado);
+    box-shadow: 0 4px 16px rgba(232, 184, 48, 0.5);
+  }
+  
+  /* =============================================
+     MODO ESCURO — Botão voltar ao topo
+     ============================================= */
+  .dark-mode #btn-topo {
+    background-color: var(--dourado-claro);
+    color: #ffffff;
+    box-shadow: 0 4px 15px rgba(232, 184, 48, 0.45);
+  }
+  .dark-mode #btn-topo:hover {
+    background-color: var(--dourado);
+  }
+  
+  /* =============================================
+     MEDIA QUERIES
+     ============================================= */
+  @media (max-width: 900px) {
+    .nav-links,
+    .nav-btn {
+      display: none;
+    }
+    .nav-toggle-label {
+      display: flex;
+    }
+    .rodape-grid {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+  @media (max-width: 768px) {
+    .secao {
+      padding: 52px 18px;
+    }
+    .container,
+    .nav-interior {
+      padding-left: 18px;
+      padding-right: 18px;
+    }
+    .titulo-secao {
+      line-height: 1.3;
+    }
+  }
+  @media (max-width: 560px) {
+    .secao {
+      padding: 44px 16px;
+    }
+    .rodape-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+
+  /* ==========================================================================
+   MODO ESCURO — SECÇÃO E MAPA INTERATIVO (LEAFLET)
+   ========================================================================== */
+
+/* 1. Garante que a secção do mapa ganha o fundo escuro correto */
+.dark-mode .secao-mapa {
+  background-color: var(--cinza) !important; /* Tom escuro de seção alternada */
+}
+
+/* 2. Aplica o filtro de inversão de cores e tonalidade no mapa */
+.dark-mode .leaflet-tile-container {
+  filter: invert(100%) hue-rotate(180deg) brightness(95%) contrast(90%);
+}
+
+/* 3. Ajusta os controlos do mapa (+ / -) e atribuições para não ficarem afetados */
+.dark-mode .leaflet-control-zoom a,
+.dark-mode .leaflet-control-attribution {
+  background-color: var(--superficie) !important;
+  color: var(--texto) !important;
+  border-color: var(--borda) !important;
+}
+
+/* 4. Estilização do Balão de Informação (Popup) no Modo Escuro */
+.dark-mode .leaflet-popup-content-wrapper,
+.dark-mode .leaflet-popup-tip {
+  background-color: var(--superficie) !important;
+  color: var(--texto) !important;
+  border: 1px solid var(--borda);
+  box-shadow: var(--sombra) !important;
+}
+
+/* Ajusta o texto que está explícito no JS do popup */
+.dark-mode .leaflet-popup-content div {
+  color: var(--texto) !important;
+}
+.dark-mode .leaflet-popup-content strong {
+  color: var(--dourado-claro) !important; /* Destaca o nome BiblioAO no escuro */
+}

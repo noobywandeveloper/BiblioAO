@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="BiblioAO — Catálogo completo de livros angolanos e da lusofonia. Mais de 500 obras de Angola, Moçambique, Brasil, Portugal, Cabo Verde, Guiné-Bissau e São Tomé e Príncipe.">
+  <title>Catálogo — Literatura Angolana e Lusofonia | BiblioAO</title>
+  <link rel="icon" href="../fontes/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../css/global.css">
+  <link rel="stylesheet" href="../css/componentes.css">
+  <link rel="stylesheet" href="../css/categorias.css">
+</head>
+<body>
+  <input type="checkbox" id="nav-toggle" class="nav-toggle">
+  <header class="nav">
+    <div class="nav-interior">
+      <a href="../index.html" class="nav-logo">Biblio<span>AO</span></a>
+      <nav class="nav-links" aria-label="Menu principal">
+        <a href="../index.html">Início</a>
+        <a href="categorias.html" class="ativo">Livros</a>
+        <a href="galeria.html">Galeria</a>
+        <a href="blog.html">Blog</a>
+        <a href="sobre-nos.html">Sobre</a>
+        <a href="contactos.html">Contactos</a>
+        <a href="newsletter.html" class="nav-btn">Newsletter</a>
+      </nav>
+
+      <button id="btn-tema" class="btn-tema-alternar" aria-label="Alternar tema">
+        <span class="icone-sol">☀️</span>
+        <span class="icone-lua">🌙</span>
+      </button>
+
+      <label for="nav-toggle" class="nav-toggle-label" aria-label="Menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </label>
+    </div>
+    <nav class="nav-mobile" aria-label="Menu mobile">
+      <a href="../index.html">Início</a>
+      <a href="categorias.html">Livros</a>
+      <a href="galeria.html">Galeria</a>
+      <a href="blog.html">Blog</a>
+      <a href="sobre-nos.html">Sobre</a>
+      <a href="contactos.html">Contactos</a>
+      <a href="newsletter.html">Newsletter</a>
+    </nav>
+  </header>
+
+  <div class="banner">
+    <div class="banner-etiqueta">Acervo da CPLP</div>
+    <h1>Todos os Livros</h1>
+    <p>Mais de 500 obras de autores angolanos, moçambicanos, brasileiros, portugueses, cabo-verdianos, guineenses e são-tomenses. Actualizado semanalmente.</p>
+  </div>
+
+  <div class="barra-pesquisa">
+    <form class="pesquisa-form" action="categorias.html" method="get">
+      <input type="text" name="q" placeholder="Pesquisar por título, autor (ex: Pepetela, Mia Couto, Agualusa)...">
+      <button type="submit">Pesquisar</button>
+    </form>
+  </div>
+
+  <section class="secao">
+    <div class="container">
+      <div class="filtros">
+        <a href="#" class="filtro-btn ativo" data-filtro="todos">Todos</a>
+        <a href="#" class="filtro-btn" data-filtro="Angola">Angola</a>
+        <a href="#" class="filtro-btn" data-filtro="Moçambique">Moçambique</a>
+        <a href="#" class="filtro-btn" data-filtro="Brasil">Brasil</a>
+        <a href="#" class="filtro-btn" data-filtro="Portugal">Portugal</a>
+        <a href="#" class="filtro-btn" data-filtro="Cabo Verde">Cabo Verde</a>
+        <a href="#" class="filtro-btn" data-filtro="Guiné-Bissau">Guiné-Bissau</a>
+        <a href="#" class="filtro-btn" data-filtro="São Tomé e Príncipe">São Tomé e Príncipe</a>
+        <a href="#" class="filtro-btn" data-filtro="Poesia">Poesia</a>
+        <a href="#" class="filtro-btn" data-filtro="Romance">Romance</a>
+      </div>
+
+      <div class="grelha-livros">
+        <!-- Angola (9 livros) -->
+        <div class="livro-card">
+          <img src="../imagens/mayombe.jpg" alt="Mayombe" width="120" height="180">
+          <div class="livro-info">
+            <div class="livro-cat">Angola · Romance</div>
+            <div class="livro-titulo">Mayombe</div>
+            <div class="livro-autor">Pepetela</div>
+            <div class="livro-meta">1980 · 312 pág.</div>
+            <div class="livro-stars">★★★★★ <span>(1240)</span></div>
+            <div class="livro-acoes">
+              <button class="btn-ler">Ler</button>
+              <button class="btn-baixar">PDF</button>
+            </div>
+          </div>
+        </div>
+        <div class="livro-card">
+          <img src="../imagens/geracao-da-utopia.jpg" alt="Geração da Utopia" width="120" height="180">
+          <div class="livro-info">
+            <div class="livro-cat">Angola · Romance</div>
+            <div class="livro-titulo">Geração da Utopia</div>
+            <div class="livro-autor">Pepetela</div>
+            <div class="livro-meta">1992 · 352 pág.</div>
+            <div class="livro-stars">★★★★½ <span>(980)</span></div>
+            <div class="livro-acoes">
+              <button class="btn-ler">Ler</button>
+              <button class="btn-baixar">PDF</button>
+            </div>
+          </div>
+        </div>
+        <div class="livro-card">
+          <img src="../imagens/bom-dia-camaradas.jpg" alt="Bom Dia Camaradas" width="120" height="180">
+          <div class="livro-info">
+            <div class="livro-cat">Angola · Romance</div>
+            <div class="livro-titulo">Bom Dia Camaradas</div>
+            <div class="livro-autor">Ondjaki</div>
+            <div class="livro-meta">2001 · 180 pág.</div>
+            <div class="livro-stars">★★★★½ <span>(1560)</span></div>
+            <div class="livro-acoes">
+              <button class="btn-ler">Ler</button>
+              <button class="btn-baixar">PDF</button>
+            </div>
+          </div>
+        </div>
+        <div class="livro-card">
+          <img src="../imagens/os-transparentes.jpg" alt="Os Transparentes" width="120" height="180">
+          <div class="livro-info">
+            <div class="livro-cat">Angola · Romance</div>
+            <div class="livro-titulo">Os Transparentes</div>
+            <div class="livro-autor">Ondjaki</div>
+            <div class="livro-meta">2012 · 296 pág.</div>
+            <div class="livro-stars">★★★★☆ <span>(730)</span></div>
+            <div class="livro-acoes">
+              <button class="btn-ler">Ler</button>
+              <button class="btn-baixar">PDF</button>
+            </div>
+          </div>
+        </div>
+        <div class="livro-card">
+          <img src="../imagens/rainha-ginga.jpg" alt="A Rainha Ginga" width="120" height="180">
+          <div class="livro-info">
+            <div class="livro-cat">Angola · Romance Histórico</div>
+            <div class="livro-titulo">A Rainha Ginga</div>
+            <div class="livro-autor">José Eduardo Agualusa</div>
+            <div class="livro-meta">2014 · 260 pág.</div>
+            <div class="livro-stars">★★★★½ <span>(1100)</span></div>
+            <div class="livro-acoes">
+              <button class="btn-ler">Ler</button>
+              <button class="btn-baixar">PDF</button>
+            </div>
+          </div>
+        </div>
+        <div class="livro-card">
+          <img src="../imagens/o-vendedor-de-passados.jpg" alt="O Vendedor de Passados" width="120" height="180">
+          <div class="livro-info">
+            <div class="livro-cat">Angola · Romance</div>
+            <div class="livro-titulo">O Vendedor de Passados</div>
+            <div class="livro-autor">José Eduardo Agualusa</div>
+            <div class="livro-meta">2004 · 248 pág.</div>
+            <div class="livro-stars">★★★★½ <span>(890)</span></div>
+            <div class="livro-acoes">
+              <button class="btn-ler">Ler</button>
+              <button class="btn-baixar">PDF</button>
+            </div>
+          </div>
+        </div>
+        <div class="livro-card">
+          <img src="../imagens/minha-rua.jpg" alt="Os da minha rua" width="120" height="180">
+          <div class="livro-info">
+            <div class="livro-cat">Angola · Contos</div>
+            <div class="livro-titulo">Os da minha rua</div>
+            <div class="livro-autor">Ondjaki</div>
+            <div class="livro-meta">2007 · 112 pág.</div>
+            <div class="livro-stars">★★★★½ <span>(520)</span></div>
+            <div class="livro-acoes">
+              <button class="btn-ler">Ler</button>
+              <button class="btn-baixar">PDF</button>
+            </div>
+          </div>
+        </div>
+        <div class="livro-card">
+          <img src="../imagens/passaro-lua.jpg" alt="Um passaro na lua" width="120" height="180">
+          <div class="livro-info">
+            <div class="livro-cat">Angola · ficcao</div>
+            <div class="livro-titulo">Um passaro na lua</div>
+            <div class="livro-autor">José Luís Mendonça</div>
+            <div class="livro-meta">2017 · 160 pág.</div>
+            <div class="livro-stars">★★★★☆ <span>(340)</span></div>
+            <div class="livro-acoes">
+              <button class="btn-ler">Ler</button>
+              <button class="btn-baixar">PDF</button>
+            </div>
+          </div>
+        </div>
+        <div class="livro-card">
+          <img src="../imagens/sagrada-esperanca.jpg" alt="Sagrada Esperança" width="120" height="180">
+          <div class="livro-info">
+            <div class="livro-cat">Angola · Poesia</div>
+            <div class="livro-titulo">Sagrada Esperança</div>
+            <div class="livro-autor">Agostinho Neto</div>
+            <div class="livro-meta">1974 · 80 pág.</div>
+            <div class="livro-stars">★★★★★ <span>(2100)</span></div>
+            <div class="livro-acoes">
+              <button class="btn-ler">Ler</button>
+              <button class="btn-baixar">PDF</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Moçambique (3 livros) -->
+        <div class="livro-card">
+          <img src="../imagens/terra-sonambula.jpg" alt="Terra Sonâmbula" width="120" height="180">
+          <div class="livro-info">
+            <div class="livro-cat">Moçambique · Romance</div>
+            <div class="livro-titulo">Terra Sonâmbula</div>
+            <div class="livro-autor">Mia Couto</div>
+            <div class="livro-meta">1992 · 240 pág.</div>
+            <div class="livro-stars">★★★★★ <span>(2310)</span></div>
+            <div class="livro-acoes">
+              <button class="btn-ler">Ler</button>
+              <button class="btn-baixar">PDF</button>
+            </div>
+          </div>
+        </div>
+        <div class="livro-card">
+          <img src="../imagens/niketche.jpg" alt="Niketche" width="120" height="180">
+          <div class="livro-info">
+            <div class="livro-cat">Moçambique · Romance</div>
+            <div class="livro-titulo">Niketche</div>
+            <div class="livro-autor">Paulina Chiziane</div>
+            <div class="livro-meta">2002 · 304 pág.</div>
+            <div class="livro-stars">★★★★½ <span>(1590)</span></div>
+            <div class="livro-acoes">
+              <button class="btn-ler">Ler</button>
+              <button class="btn-baixar">PDF</button>
+            </div>
+          </div>
+        </div>
+        <div class="livro-card">
+          <img src="../imagens/outro-pe-sereia.jpg" alt="O Outro Pé da Sereia" width="120" height="180">
+          <div class="livro-info">
+            <div class="livro-cat">Moçambique · Romance</div>
+            <div class="livro-titulo">O Outro Pé da Sereia</div>
+            <div class="livro-autor">Mia Couto</div>
+            <div class="livro-meta">2006 · 280 pág.</div>
+            <div class="livro-stars">★★★★½ <span>(980)</span></div>
+            <div class="livro-acoes">
+              <button class="btn-ler">Ler</button>
+              <button class="btn-baixar">PDF</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Brasil (3 livros) -->
+        <div class="livro-card">
+          <img src="../imagens/quarto-despejo.jpg" alt="Quarto de Despejo" width="120" height="180">
+          <div class="livro-info">
+            <div class="livro-cat">Brasil · Diário</div>
+            <div class="livro-titulo">Quarto de Despejo</div>
+            <div class="livro-autor">Carolina Maria de Jesus</div>
+            <div class="livro-meta">1960 · 182 pág.</div>
+            <div class="livro-stars">★★★★★ <span>(3400)</span></div>
+            <div class="livro-acoes">
+              <button class="btn-ler">Ler</button>
+              <button class="btn-baixar">PDF</button>
+            </div>
+          </div>
+        </div>
+        <div class="livro-card">
+          <img src="../imagens/o-cortico.jpg" alt="O Cortiço" width="120" height="180">
+          <div class="livro-info">
+            <div class="livro-cat">Brasil · Romance</div>
+            <div class="livro-titulo">O Cortiço</div>
+            <div class="livro-autor">Aluísio Azevedo</div>
+            <div class="livro-meta">1890 · 240 pág.</div>
+            <div class="livro-stars">★★★★½ <span>(1950)</span></div>
+            <div class="livro-acoes">
+              <button class="btn-ler">Ler</button>
+              <button class="btn-baixar">PDF</button>
+            </div>
+          </div>
+        </div>
+        <div class="livro-card">
+          <img src="../imagens/claro-enigma.jpg" alt="Claro Enigma" width="120" height="180">
+          <div class="livro-info">
+            <div class="livro-cat">Brasil · Poesia</div>
+            <div class="livro-titulo">Claro Enigma</div>
+            <div class="livro-autor">Carlos Drummond de Andrade</div>
+            <div class="livro-meta">1951 · 120 pág.</div>
+            <div class="livro-stars">★★★★½ <span>(1120)</span></div>
+            <div class="livro-acoes">
+              <button class="btn-ler">Ler</button>
+              <button class="btn-baixar">PDF</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Portugal (2 livros) -->
+        <div class="livro-card">
+          <img src="../imagens/ensaio-cegueira.jpg" alt="Ensaio sobre a Cegueira" width="120" height="180">
+          <div class="livro-info">
+            <div class="livro-cat">Portugal · Romance</div>
+            <div class="livro-titulo">Ensaio sobre a Cegueira</div>
+            <div class="livro-autor">José Saramago</div>
+            <div class="livro-meta">1995 · 320 pág.</div>
+            <div class="livro-stars">★★★★★ <span>(5200)</span></div>
+            <div class="livro-acoes">
+              <button class="btn-ler">Ler</button>
+              <button class="btn-baixar">PDF</button>
+            </div>
+          </div>
+        </div>
+        <div class="livro-card">
+          <img src="../imagens/cesario-verde.jpg" alt="O Livro de Cesário Verde" width="120" height="180">
+          <div class="livro-info">
+            <div class="livro-cat">Portugal · Poesia</div>
+            <div class="livro-titulo">O Livro de Cesário Verde</div>
+            <div class="livro-autor">Cesário Verde</div>
+            <div class="livro-meta">1887 · 96 pág.</div>
+            <div class="livro-stars">★★★★½ <span>(870)</span></div>
+            <div class="livro-acoes">
+              <button class="btn-ler">Ler</button>
+              <button class="btn-baixar">PDF</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Cabo Verde (3 livros) -->
+        <div class="livro-card">
+          <img src="../imagens/ilha-fantastica.jpg" alt="A ilha Fantástica" width="120" height="180">
+          <div class="livro-info">
+            <div class="livro-cat">Cabo Verde · Romance</div>
+            <div class="livro-titulo">A ilha Fantástica</div>
+            <div class="livro-autor">Germano Almeida</div>
+            <div class="livro-meta">2004 · 210 pág.</div>
+            <div class="livro-stars">★★★★☆ <span>(590)</span></div>
+            <div class="livro-acoes">
+              <button class="btn-ler">Ler</button>
+              <button class="btn-baixar">PDF</button>
+            </div>
+          </div>
+        </div>
+        <div class="livro-card">
+          <img src="../imagens/essa-dama.jpg" alt="Essa dama bate bué" width="120" height="180">
+          <div class="livro-info">
+            <div class="livro-cat">Cabo Verde · Biografia</div>
+            <div class="livro-titulo">Essa dama bate bué</div>
+            <div class="livro-autor">Yara Monteiro</div>
+            <div class="livro-meta">2019 · 220 pág.</div>
+            <div class="livro-stars">★★★★½ <span>(430)</span></div>
+            <div class="livro-acoes">
+              <button class="btn-ler">Ler</button>
+              <button class="btn-baixar">PDF</button>
+            </div>
+          </div>
+        </div>
+        <div class="livro-card">
+          <img src="../imagens/dois-irmaos.jpg" alt="os dois-irmaos" width="120" height="180">
+          <div class="livro-info">
+            <div class="livro-cat">Cabo Verde</div>
+            <div class="livro-titulo">Dois irmãos</div>
+            <div class="livro-autor">Germano Almeida</div>
+            <div class="livro-meta">2009 · 190 pág.</div>
+            <div class="livro-stars">★★★★½ <span>(380)</span></div>
+            <div class="livro-acoes">
+              <button class="btn-ler">Ler</button>
+              <button class="btn-baixar">PDF</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Guiné-Bissau (1 livro) -->
+        <div class="livro-card">
+          <img src="../imagens/tragedia.jpg" alt="A ultima tragedia" width="120" height="180">
+          <div class="livro-info">
+            <div class="livro-cat">Guiné-Bissau · Romance</div>
+            <div class="livro-titulo">A última tragédia</div>
+            <div class="livro-autor">Abdulai Sila</div>
+            <div class="livro-meta">2004 · 208 pág.</div>
+            <div class="livro-stars">★★★★☆ <span>(290)</span></div>
+            <div class="livro-acoes">
+              <button class="btn-ler">Ler</button>
+              <button class="btn-baixar">PDF</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- São Tomé e Príncipe (1 livro) -->
+        <div class="livro-card">
+          <img src="../imagens/cha-principe.jpg" alt="Chá do principe" width="120" height="180">
+          <div class="livro-info">
+            <div class="livro-cat">São Tomé e Príncipe · Romance</div>
+            <div class="livro-titulo">Chá do Príncipe</div>
+            <div class="livro-autor">Olinda Beja</div>
+            <div class="livro-meta">2014 · 150 pág.</div>
+            <div class="livro-stars">★★★★☆ <span>(210)</span></div>
+            <div class="livro-acoes">
+              <button class="btn-ler">Ler</button>
+              <button class="btn-baixar">PDF</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="rodape">
+    <div class="rodape-grid">
+      <div>
+        <div class="rodape-logo">Biblio<span>AO</span></div>
+        <p class="rodape-desc">A primeira biblioteca digital gratuita dedicada à literatura angolana e da lusofonia. Promovemos a leitura e a diversidade cultural.</p>
+        <div class="rodape-redes">
+          <a href="https://www.facebook.com/juliomalanda.junior" aria-label="Facebook">Fb</a>
+          <a href="https://www.instagram.com/juliomalanda/" aria-label="Instagram">Ig</a>
+          <a href="#" aria-label="Twitter">Tw</a>
+          <a href="#" aria-label="YouTube">Yt</a>
+        </div>
+      </div>
+      <div class="rodape-col">
+        <div class="rodape-col-titulo">Biblioteca</div>
+        <a href="categorias.html">Todos os Livros</a>
+        <a href="galeria.html">Galeria</a>
+        <a href="blog.html">Blog</a>
+      </div>
+      <div class="rodape-col">
+        <div class="rodape-col-titulo">Informação</div>
+        <a href="sobre-nos.html">Sobre Nós</a>
+        <a href="testemunhos.html">Testemunhos</a>
+        <a href="faq.html">FAQ</a>
+        <a href="contactos.html">Contactos</a>
+      </div>
+      <div class="rodape-col">
+        <div class="rodape-col-titulo">Legal</div>
+        <a href="privacidade.html">Privacidade</a>
+        <a href="termos.html">Termos</a>
+        <a href="mapa-do-site.html">Mapa do Site</a>
+      </div>
+    </div>
+    <div class="rodape-base">
+      <span>&copy; 2025 BiblioAO · Literatura Angolana e Lusofonia</span>
+      <span>
+        <a href="privacidade.html">Privacidade</a> &middot;
+        <a href="termos.html">Termos</a> &middot;
+        <a href="mapa-do-site.html">Mapa do Site</a>
+      </span>
+    </div>
+  </footer>
+
+  <button id="btn-topo" title="Voltar ao topo">↑</button>
+  <script src="../javaScript/app.js"></script>
+</body>
+</html>
